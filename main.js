@@ -8,6 +8,7 @@ let totalRows = 6;
 let board = document.querySelector(".board");
 let overlay = document.querySelector(".overlay");
 let currentCoin = document.querySelector(".current-coin");
+let tiles = [];
 
 let generateFirstTurn = () => {
   let randomNumber = Math.floor(Math.random() * 10);
@@ -39,6 +40,7 @@ const generateBoard = () => {
       board.append(tile);
     }
   }
+  console.log(board);
 };
 
 const playNextTurn = (setTileEvent) => {
@@ -105,11 +107,11 @@ const displayGameOver = () => {
   setTimeout(() => {
     overlay.classList.remove(turnYellow);
     overlay.classList.remove(turnRed);
-    document.querySelector(".win-overlay").style.zIndex = 2;
+    document.querySelector(".win-overlay").style.zIndex = 3;
     overlay.style.zIndex = 2;
   }, 1000);
 
   setTimeout(() => {
     location.reload();
-  }, 3000);
+  }, 5000);
 };
