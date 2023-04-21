@@ -40,7 +40,6 @@ const generateBoard = () => {
       board.append(tile);
     }
   }
-  console.log(board);
 };
 
 const playNextTurn = (setTileEvent) => {
